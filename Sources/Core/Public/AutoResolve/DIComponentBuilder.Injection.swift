@@ -11,7 +11,7 @@ private typealias MM = MethodMaker
 public extension DIComponentBuilder {
 
   private func append(injection signature: MethodSignature) -> Self {
-    component.append(injection: signature, cycle: false)
+    component.injections.append(Injection(signature: signature, cycle: false))
     return self
   }
 

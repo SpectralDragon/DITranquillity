@@ -54,6 +54,9 @@
 		D51666FE1F1FBFAA001AD9F5 /* DIPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51666FA1F1FBFAA001AD9F5 /* DIPart.swift */; };
 		D51666FF1F1FBFAA001AD9F5 /* DIPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51666FA1F1FBFAA001AD9F5 /* DIPart.swift */; };
 		D51667001F1FBFAA001AD9F5 /* DIPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51666FA1F1FBFAA001AD9F5 /* DIPart.swift */; };
+		D52C7A851F832D980078AED8 /* DIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C7A841F832D980078AED8 /* DIExtension.swift */; };
+		D52C7A861F832D980078AED8 /* DIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C7A841F832D980078AED8 /* DIExtension.swift */; };
+		D52C7A871F832D980078AED8 /* DIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C7A841F832D980078AED8 /* DIExtension.swift */; };
 		D55368F21EE5BD3300015926 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55368F11EE5BD3300015926 /* Log.swift */; };
 		D55368F31EE5BD3600015926 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55368F11EE5BD3300015926 /* Log.swift */; };
 		D55368F41EE5BD3600015926 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55368F11EE5BD3300015926 /* Log.swift */; };
@@ -85,9 +88,6 @@
 		D57961821F52C2BD0079DE8C /* DIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57961801F52C2BD0079DE8C /* DIStoryboard.swift */; };
 		D57961831F52C2BD0079DE8C /* DIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57961801F52C2BD0079DE8C /* DIStoryboard.swift */; };
 		D57961841F52C2BD0079DE8C /* DIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57961801F52C2BD0079DE8C /* DIStoryboard.swift */; };
-		D57961851F52C2BD0079DE8C /* StoryboardResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57961811F52C2BD0079DE8C /* StoryboardResolver.swift */; };
-		D57961861F52C2BD0079DE8C /* StoryboardResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57961811F52C2BD0079DE8C /* StoryboardResolver.swift */; };
-		D57961871F52C2BD0079DE8C /* StoryboardResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57961811F52C2BD0079DE8C /* StoryboardResolver.swift */; };
 		D57961891F52C4BC0079DE8C /* UIStoryboard+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D57961881F52C4BC0079DE8C /* UIStoryboard+Swizzling.m */; };
 		D579618A1F52C4BC0079DE8C /* UIStoryboard+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D57961881F52C4BC0079DE8C /* UIStoryboard+Swizzling.m */; };
 		D57961941F52D37E0079DE8C /* NSStoryboard+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D57961911F52D36F0079DE8C /* NSStoryboard+Swizzling.m */; };
@@ -116,6 +116,7 @@
 		D512552C1EE06F010067796B /* DISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DISettings.swift; sourceTree = "<group>"; };
 		D51666F91F1FBFAA001AD9F5 /* DIFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIFramework.swift; sourceTree = "<group>"; };
 		D51666FA1F1FBFAA001AD9F5 /* DIPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIPart.swift; sourceTree = "<group>"; };
+		D52C7A841F832D980078AED8 /* DIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIExtension.swift; sourceTree = "<group>"; };
 		D55368F11EE5BD3300015926 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		D553690F1EE658EA00015926 /* TypeKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeKey.swift; sourceTree = "<group>"; };
 		D55369171EE6E2AE00015926 /* BundleContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleContainer.swift; sourceTree = "<group>"; };
@@ -132,7 +133,6 @@
 		D57961781F52BA5D0079DE8C /* DIStoryboardBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIStoryboardBase.h; sourceTree = "<group>"; };
 		D57961791F52BA5D0079DE8C /* DIStoryboardBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIStoryboardBase.m; sourceTree = "<group>"; };
 		D57961801F52C2BD0079DE8C /* DIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIStoryboard.swift; sourceTree = "<group>"; };
-		D57961811F52C2BD0079DE8C /* StoryboardResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardResolver.swift; sourceTree = "<group>"; };
 		D57961881F52C4BC0079DE8C /* UIStoryboard+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Swizzling.m"; sourceTree = "<group>"; };
 		D57961911F52D36F0079DE8C /* NSStoryboard+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStoryboard+Swizzling.m"; sourceTree = "<group>"; };
 		D5E3C7D11F3C0C5A0022DD43 /* ByTagAndMany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByTagAndMany.swift; sourceTree = "<group>"; };
@@ -177,6 +177,7 @@
 		16640A4C1D9E1E7B00707BFC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D52C7A831F832D8D0078AED8 /* Extensions */,
 				D51666F81F1FBFAA001AD9F5 /* Hierarchy */,
 				16640A501D9E1E7B00707BFC /* Core */,
 				16640A6D1D9E1E7B00707BFC /* Storyboard */,
@@ -231,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				D57961801F52C2BD0079DE8C /* DIStoryboard.swift */,
-				D57961811F52C2BD0079DE8C /* StoryboardResolver.swift */,
 				D57961681F526FBA0079DE8C /* StoryboardContainerMap.swift */,
 				169C0E101DA352C7001F0AD5 /* iOS-tvOS */,
 				169C0E131DA352C7001F0AD5 /* OSX */,
@@ -294,6 +294,14 @@
 				D51666FA1F1FBFAA001AD9F5 /* DIPart.swift */,
 			);
 			path = Hierarchy;
+			sourceTree = "<group>";
+		};
+		D52C7A831F832D8D0078AED8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D52C7A841F832D980078AED8 /* DIExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,6 +470,7 @@
 				16D7BCBE1DB086B900A29A9F /* DIScanPart.swift in Sources */,
 				115C24C91E6527CA00CC8BC7 /* Synchronize.swift in Sources */,
 				D51666FF1F1FBFAA001AD9F5 /* DIPart.swift in Sources */,
+				D52C7A861F832D980078AED8 /* DIExtension.swift in Sources */,
 				163DDDC71DB9C84E0003DE54 /* DITypes.swift in Sources */,
 				169C0DD11DA3501F001F0AD5 /* Resolver.swift in Sources */,
 				D579617E1F52BA5D0079DE8C /* DIStoryboardBase.m in Sources */,
@@ -477,7 +486,6 @@
 				D579616A1F526FBA0079DE8C /* StoryboardContainerMap.swift in Sources */,
 				D55369111EE658EA00015926 /* TypeKey.swift in Sources */,
 				D5E3C7D31F3C0C5A0022DD43 /* ByTagAndMany.swift in Sources */,
-				D57961861F52C2BD0079DE8C /* StoryboardResolver.swift in Sources */,
 				1651E7061E86373D00E967B4 /* DIComponentBuilder.Injection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +504,7 @@
 				16D7BCC01DB086B900A29A9F /* DIScanPart.swift in Sources */,
 				115C24CA1E6527CA00CC8BC7 /* Synchronize.swift in Sources */,
 				D51667001F1FBFAA001AD9F5 /* DIPart.swift in Sources */,
+				D52C7A871F832D980078AED8 /* DIExtension.swift in Sources */,
 				163DDDC81DB9C84E0003DE54 /* DITypes.swift in Sources */,
 				169C0E371DA35CBE001F0AD5 /* Resolver.swift in Sources */,
 				D57961731F52BA160079DE8C /* DIStoryboardBase.m in Sources */,
@@ -510,7 +519,6 @@
 				D579616B1F526FBA0079DE8C /* StoryboardContainerMap.swift in Sources */,
 				D55369121EE658EA00015926 /* TypeKey.swift in Sources */,
 				D5E3C7D41F3C0C5A0022DD43 /* ByTagAndMany.swift in Sources */,
-				D57961871F52C2BD0079DE8C /* StoryboardResolver.swift in Sources */,
 				D579618A1F52C4BC0079DE8C /* UIStoryboard+Swizzling.m in Sources */,
 				1651E7071E86373D00E967B4 /* DIComponentBuilder.Injection.swift in Sources */,
 			);
@@ -522,7 +530,6 @@
 			files = (
 				119F4FD61E56069200B2DFA1 /* DIContainer.Reg.swift in Sources */,
 				16640A851D9E1E7B00707BFC /* DIComponentBuilder.swift in Sources */,
-				D57961851F52C2BD0079DE8C /* StoryboardResolver.swift in Sources */,
 				D55AFCB81EEEA97400527D27 /* MethodSignature.swift in Sources */,
 				D55AFCB41EEEA48D00527D27 /* MethodMaker.swift in Sources */,
 				D5E3C7D21F3C0C5A0022DD43 /* ByTagAndMany.swift in Sources */,
@@ -530,6 +537,7 @@
 				D57961711F52BA160079DE8C /* DIStoryboardBase.m in Sources */,
 				D57961641F4FC7F40079DE8C /* DIByTagAndMany.swift in Sources */,
 				115C24C81E6527CA00CC8BC7 /* Synchronize.swift in Sources */,
+				D52C7A851F832D980078AED8 /* DIExtension.swift in Sources */,
 				163DDDC61DB9C84E0003DE54 /* DITypes.swift in Sources */,
 				D55369181EE6E2AE00015926 /* BundleContainer.swift in Sources */,
 				D57961691F526FBA0079DE8C /* StoryboardContainerMap.swift in Sources */,

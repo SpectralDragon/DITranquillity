@@ -111,7 +111,7 @@ public extension DIContainer {
   
   internal func register<Impl>(_ file: String, _ line: Int, _ signature: MethodSignature) -> DIComponentBuilder<Impl> {
     let builder = register(Impl.self, file: file, line: line)
-    builder.component.set(initial: signature)
+    builder.component.initial = signature
     return builder
   }
 }

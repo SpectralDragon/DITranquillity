@@ -48,7 +48,7 @@ public final class DIStoryboard: _DIStoryboardBase {
   /// - Returns: The new instane of `DIStoryboard`.
   public class func create(name: String, bundle storyboardBundleOrNil: Bundle?, container: DIContainer) -> DIStoryboard {
     let storyboard = DIStoryboard._create(name, bundle: storyboardBundleOrNil)
-    storyboard.resolver = StoryboardResolver(container: container)
+    storyboard.container = container
     return storyboard
   }
 
@@ -61,8 +61,16 @@ public final class DIStoryboard: _DIStoryboardBase {
   /// - Returns: The instantiated view controller with its dependencies injected.
   public override func instantiateViewController(withIdentifier identifier: String) -> UIViewController {
     let vc = super.instantiateViewController(withIdentifier: identifier)
-    resolver?.inject(into: vc)
+    inject(into: vc)
     return vc
+  }
+  
+  private func inject(into viewController: UIViewController) {
+    container?.inject(into: viewController)
+    
+    for childVC in viewController.childViewControllers {
+      inject(into: childVC)
+    }
   }
   
   #elseif os(OSX)
@@ -74,15 +82,29 @@ public final class DIStoryboard: _DIStoryboardBase {
   /// - Returns: The instantiated view/window controller with its dependencies injected.
   public override func instantiateController(withIdentifier identifier: String) -> Any {
     let vc = super.instantiateController(withIdentifier: identifier)
-    resolver?.inject(into: vc)
+    inject(into: vc)
     return vc
+  }
+  
+  private func inject(into viewController: Any) {
+    container?.inject(into: viewController)
+  
+    if let windowController = viewController as? NSWindowController, let viewController = windowController.contentViewController {
+      inject(into: viewController)
+    }
+  
+    if let nsViewController = viewController as? NSViewController {
+      for childVC in nsViewController.childViewControllers {
+        inject(into: childVC)
+      }
+    }
   }
   
   #endif
 
-  private var resolver: StoryboardResolver? = nil
+  fileprivate var container: DIContainer? = nil
 }
- 
+  
 // MARK: - Storyboard maker
 public extension DIContainer {
   #if os(iOS) || os(tvOS)
@@ -124,6 +146,15 @@ public extension DIContainer {
   }
   
   #endif
+}
+  
+public extension DIExtension {
+  public convenience init?(storyboard: UIStoryboard) {
+    guard let container = (storyboard as? DIStoryboard)?.container else {
+      return nil
+    }
+    self.init(container: container)
+  }
 }
   
 #endif

@@ -62,8 +62,8 @@ final class Component {
   var lifeTime = DILifeTime.default
   var isDefault: Bool = false
   
-  fileprivate(set) var initial: MethodSignature?
-  fileprivate(set) var injections: [Injection] = []
+  var initial: MethodSignature?
+  var injections: [Injection] = []
   
   var postInit:  MethodSignature?
 }
@@ -75,15 +75,3 @@ extension Component: Hashable {
     return lhs.info == rhs.info
   }
 }
-
-
-extension Component {
-  func set(initial signature: MethodSignature) {
-    initial = signature
-  }
-  
-  func append(injection signature: MethodSignature, cycle: Bool) {
-    injections.append(Injection(signature: signature, cycle: cycle))
-  }
-}
-
