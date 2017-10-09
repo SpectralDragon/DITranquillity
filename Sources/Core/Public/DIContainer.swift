@@ -185,6 +185,50 @@ public extension DIContainer {
   }
 }
 
+// MARK: - Print
+public extension DIContainer {
+	
+	public func printMapping() {
+		var map: [Bundle: [Component]] = [:]
+		for component in componentContainer.components {
+			if nil == map[component.bundle ?? Bundle.main] {
+				map[component.bundle ?? Bundle.main] = [component]
+			} else {
+				map[component.bundle ?? Bundle.main]?.append(component)
+			}
+		}
+		
+		for (bundle, components) in map {
+			if bundle == Bundle.main {
+				continue
+			}
+			
+			let bundleName = (bundle.bundlePath as NSString).lastPathComponent
+			
+			let allParameters = components.flatMap{ $0.signatures.flatMap{ $0.parameters }}
+			let dependencies = allParameters.flatMap{ resolver.findComponents(by: $0.type, with: $0.name, from: bundle) }
+			
+			let otherDependencies = dependencies.filter{ ($0.bundle ?? Bundle.main) != bundle }
+			
+			let types: Set<String> = Set(otherDependencies.map { "\($0.info.type)" })
+			let bundles: Set<String> = Set(otherDependencies.flatMap{ $0.bundle }.map{ ($0.bundlePath as NSString).lastPathComponent })
+			
+			print("=====>>>\(bundleName)<<<=====")
+			print("===== Types =====")
+			for type in types {
+				print(type)
+			}
+			print("")
+			print("===== Bundles =====")
+			for bundle in bundles {
+				print(bundle)
+			}
+			print("")
+			print("")
+		}
+	}
+}
+
 // MARK: - Validation
 public extension DIContainer {
   
