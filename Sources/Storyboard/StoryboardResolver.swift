@@ -25,7 +25,7 @@ final class StoryboardResolver {
   func inject(into viewController: UIViewController) {
     self.container.inject(into: viewController, from: bundle)
     
-    for childVC in viewController.childViewControllers {
+    for childVC in viewController.children {
       inject(into: childVC)
     }
   }
